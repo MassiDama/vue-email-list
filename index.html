@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- link api -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue Email List</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <!-- // Far comparire gli indirizzi email solamente quando sono stati tutti generati. -->
+        <ul v-if="emails.length === 10">
+            <li v-for="(email,i) in emails" :key="i"> 
+                {{ email }} 
+            </li>
+        </ul>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
